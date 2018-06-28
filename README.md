@@ -2,6 +2,14 @@
 
 Simple aliases for git. 
 
+To install: 
+```
+git clone https://github.com/0xc00010ff/git-alias &&
+cd git-alias &&
+make install
+```
+To verify, run `git aliases`
+
 - `a` : `add`  
 Add a file to the index
 - `amend` : `commit --amend`  
