@@ -17,7 +17,7 @@ install:
 	git config --global alias.list 'log --oneline'
 	git config --global alias.mastiff 'log --oneline master..HEAD'
 	git config --global alias.new 'checkout -b'
-	git config --global alias.remaster '! _current=$(git branch | sed -n -e "s/^\* \(.*\)/\1/p") && git checkout master && git pull && git checkout $_current && git rebase master'
+	git config --global alias.remaster '! _current="$(git symbolic-ref --short -q HEAD)" && git checkout master && git pull && git checkout $_current && git rebase master'
 	git config --global alias.rename 'branch -m'
 	git config --global alias.s '!clear && ls && git status'
 	git config --global alias.stage 'add'
