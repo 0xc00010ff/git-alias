@@ -1,8 +1,8 @@
 # git-alias
 
-Simple aliases for git. 
+Simple aliases for git.
 
-To install: 
+To install:
 ```
 git clone https://github.com/0xc00010ff/git-alias &&
 cd git-alias &&
@@ -24,6 +24,8 @@ List all branches, including remote copies
 Common typo for branch
 - `c` : `commit`  
 Commit everything from the index into git history
+- `clear` : `!clear && ls && git status`  
+A clean git status
 - `co` : `checkout`  
 Point to a different branch
 - `d` : `diff`  
@@ -43,13 +45,17 @@ A condensed form of the commit log
 - `mastiff` : `log --oneline master..HEAD`  
 Compare commits between this branch and master  
 - `new` : `checkout -b`  
-Create a new branch (provide the name after 'new')
+Compare commits between this branch and master  
+- `pr` : Some heady bash script... view source for details
+Creates a pull request off the current branch. Make sure you pushed first!  
+- `pullrequest` : Some heady bash script... view source for details
+Long form for the above.  
 - `remaster` : `! _current=$(git branch | sed -n -e "s/^\* \(.*\)/\1/p") && git checkout master && git pull && git checkout $_current && git rebase master`  
 This one is heavy. Pop over to master, pull, pop back to the current branch and rebase master. You might want to stash first.
 - `rename` : `branch -m`  
 Rename the current branch
 - `s` : `!clear && ls && git status`  
-A clean git status
+A clean git status, same as **clear**
 - `stage` : `add`  
 Add files to the staging area (green)
 - `unamend` : `reset --soft HEAD@{1}`  
