@@ -42,16 +42,16 @@ Print the last commit
 Show the difference between the last commit and the one before
 - `list` : `log --oneline`  
 A condensed form of the commit log
-- `mastiff` : `log --oneline master..HEAD`  
-Compare commits between this branch and master  
+- `mastiff` : `log --oneline main..HEAD`  
+Compare commits between this branch and main  
 - `new` : `checkout -b`  
-Compare commits between this branch and master  
+Compare commits between this branch and main  
 - `pr` : Some heady bash script... view source for details
 Creates a pull request off the current branch. Make sure you pushed first!  
 - `pullrequest` : Some heady bash script... view source for details
 Long form for the above.  
-- `remaster` : `! _current=$(git branch | sed -n -e "s/^\* \(.*\)/\1/p") && git checkout master && git pull && git checkout $_current && git rebase master`  
-This one is heavy. Pop over to master, pull, pop back to the current branch and rebase master. You might want to stash first.
+- `remain` : `! _current=$(git branch | sed -n -e "s/^\* \(.*\)/\1/p") && git checkout main && git pull && git checkout $_current && git rebase main`  
+This one is heavy. Pop over to main, pull, pop back to the current branch and rebase main. You might want to stash first.
 - `rename` : `branch -m`  
 Rename the current branch
 - `s` : `!clear && ls && git status`  
